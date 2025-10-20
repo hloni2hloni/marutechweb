@@ -1,0 +1,498 @@
+/* Custom CSS for Maru Tech Systems Website - Mobile-First Approach with Jumbotron */
+
+:root {
+    --primary-color: #c41e3a;
+    --secondary-color: #f39c12;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+}
+
+/* Global Styles - Mobile First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Customization - Mobile First */
+.navbar {
+    padding: 0.75rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: var(--dark-bg) !important;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar-brand .logo {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Jumbotron Section - Mobile First */
+.jumbotron-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    z-index: 0;
+}
+
+.jumbotron-container {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+
+/* Carousel Section - Mobile First - Reduced Size */
+.carousel {
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.carousel-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    width: 90%;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel Controls - Reduced Size */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 100%, 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Carousel Indicators - Dash-like Style */
+.carousel-indicators {
+    bottom: 12px;
+    gap: 6px;
+}
+
+.carousel-indicators button {
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scaleX(1.1);
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+    border-color: #fff;
+    width: 24px;
+    height: 4px;
+}
+
+/* Section Styling - Mobile First */
+section {
+    padding: 40px 0;
+}
+
+.display-5 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.display-4 {
+    font-size: 2rem;
+}
+
+.lead {
+    font-size: 1rem;
+}
+
+/* Button Customization */
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background: #a01729;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+}
+
+/* Card Customization */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Contact Form */
+.form-control {
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(196, 30, 58, 0.25);
+}
+
+/* Text Utilities */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-bg) !important;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+/* Smooth Transitions */
+a {
+    text-decoration: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a01729;
+}
+
+/* Tablet Breakpoint (sm - 576px) */
+@media (min-width: 576px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar-brand .logo {
+        height: 45px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem;
+    }
+
+    .jumbotron-section {
+        padding: 25px 0;
+    }
+
+    .carousel-item {
+        height: 350px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        display: block;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .service-icon {
+        font-size: 3rem;
+    }
+}
+
+/* Medium Breakpoint (md - 768px) */
+@media (min-width: 768px) {
+    .navbar-brand .logo {
+        height: 50px;
+    }
+
+    .jumbotron-section {
+        padding: 30px 0;
+    }
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    .display-5 {
+        font-size: 2.2rem;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Large Breakpoint (lg - 992px) */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .jumbotron-section {
+        padding: 35px 0;
+    }
+
+    .carousel-item {
+        height: 450px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .display-5 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 3.5rem;
+    }
+
+    .btn-primary {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Large Breakpoint (xl - 1200px) */
+@media (min-width: 1200px) {
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1.25rem !important;
+    }
+
+    .jumbotron-section {
+        padding: 40px 0;
+    }
+
+    .carousel-item {
+        height: 500px;
+    }
+
+    section {
+        padding: 100px 0;
+    }
+
+    .display-5 {
+        font-size: 2.75rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Touch-friendly elements for mobile */
+@media (max-width: 768px) {
+    button, a, .nav-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .carousel-indicators button {
+        width: 7px;
+        height: 7px;
+    }
+
+    .carousel-indicators button.active {
+        width: 9px;
+        height: 9px;
+    }
+}
+
